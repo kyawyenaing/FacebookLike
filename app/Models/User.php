@@ -69,7 +69,7 @@ class User extends Authenticatable
 
     public function getPhoto($w = null, $h = null){
         if (!empty($this->profile_path)){
-            $path = 'storage/uploads/profile_photos/'.$this->profile_path;
+            $path = 'uploads/profile_photos/'.$this->profile_path;
         }else {
             $path = "images/profile-picture.png";
         }
@@ -86,7 +86,7 @@ class User extends Authenticatable
 
     public function getCover($w = null, $h = null){
         if (!empty($this->cover_path)){
-            $path = 'storage/uploads/covers/'.$this->cover_path;
+            $path = 'uploads/covers/'.$this->cover_path;
         }else {
             return "";
         }

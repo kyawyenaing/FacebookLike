@@ -26,10 +26,6 @@ class SettingsController extends Controller
         }else{
             $user = Auth::user();
         }
-
-
-
-
         return view('settings', compact('user'));
 
 

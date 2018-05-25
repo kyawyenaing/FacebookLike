@@ -287,7 +287,7 @@ class ProfileController extends Controller
             $file = $request->file('image');
 
             $file_name = md5(uniqid() . time()) . '.' . $file->getClientOriginalExtension();
-            if ($file->storeAs('public/uploads/profile_photos', $file_name)){
+            if ($file->storeAs('uploads/profile_photos', $file_name)){
                 $response['code'] = 200;
                 $this->user->profile_path = $file_name;
                 $this->user->save();
@@ -324,7 +324,7 @@ class ProfileController extends Controller
             $file = $request->file('image');
 
             $file_name = md5(uniqid() . time()) . '.' . $file->getClientOriginalExtension();
-            if ($file->storeAs('public/uploads/covers', $file_name)){
+            if ($file->storeAs('uploads/covers', $file_name)){
                 $response['code'] = 200;
                 $this->user->cover_path = $file_name;
                 $this->user->save();

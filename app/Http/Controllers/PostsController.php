@@ -74,9 +74,6 @@ class PostsController extends Controller
 
         $posts = $posts->limit($limit)->orderBy('id', 'DESC')->get();
 
-
-
-
         if ($div_location == 'initialize'){
             $div_location = ['top', 'bottom'];
         }else{
@@ -284,16 +281,10 @@ class PostsController extends Controller
                 $file = $request->file('image');
 
                 $file_name = md5(uniqid() . time()) . '.' . $file->getClientOriginalExtension();
-                if ($file->storeAs('public/uploads/posts', $file_name)) {
-                    $process = true;
-                } else {
-                    $process = false;
-                }
-            }else{
-                $process = true;
+                $Path = $file->storeAs('uploads/posts', $file_name);
             }
 
-            if ($process){
+            if ($Path){
                 if ($post->save()) {
                     if ($post->has_image == 1) {
                         $post_image = new PostImage();

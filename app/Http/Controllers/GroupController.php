@@ -43,7 +43,6 @@ class GroupController extends Controller
 
         $city = $user->location->city;
 
-
         return view('groups.index', compact('user', 'groups', 'city'));
     }
 

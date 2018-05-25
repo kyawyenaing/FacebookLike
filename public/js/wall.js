@@ -16,9 +16,6 @@ $(function() {
             }
         });
 
-
-
-
         setInterval(function(){
 
             fetchForNewPosts();

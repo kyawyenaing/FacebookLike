@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                Discover your surroundings. Share your hobbies. Meet new people with Around.kim!
+                FaceBookLike
             </div>
         </div>
     </div>
@@ -33,13 +33,11 @@
     <div class="row">
         <div class="col-md-6">
             <a href="{{ url('/') }}" class="logo">
-                <img src="{{ asset('images/guest_logo.png') }}" alt="" />
+                <!-- <img src="{{ asset('images/guest_logo.png') }}" alt="" /> -->
             </a>
         </div>
 
         <div class="col-md-6">
-
-
             <div class="tab_container">
                 <input id="tab1" type="radio" name="tabs" {{ old('tab') != 'register' ? 'checked' : '' }} class="radio_hidden">
                 <label for="tab1" class="head"><i class="fa fa-user"></i><span>LOGIN</span></label>
@@ -49,9 +47,7 @@
 
                 <div class="contents">
                     <section id="content1" class="tab-content">
-
                         @include('auth.login')
-
                     </section>
 
                     <section id="content2" class="tab-content">
@@ -60,14 +56,8 @@
                     </section>
                 </div>
             </div>
-
-
-
         </div>
-
     </div>
-
-
     @include('widgets.footer')
 </div>
 

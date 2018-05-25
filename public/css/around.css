@@ -574,7 +574,7 @@ a, a:hover, a:active, a:visited, a:focus {
     border-color: #3c76a7;
     padding-left: 20px;
     padding-right: 20px;
-    color: #fff
+    color: #fff;
 }
 
 .new-post-box .btn-submit:hover {

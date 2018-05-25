@@ -19,7 +19,7 @@ class PostImage extends Model
 
 
     public function getURL(){
-        return url('storage/uploads/posts/'.$this->image_path);
+        return url('uploads/posts/'.$this->image_path);
     }
 
 }
